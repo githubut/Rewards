@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTwalk.com | Game Rewards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Space+Grotesk:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="game-detail-page">
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="site-container nav-container">
+            <a href="index.html" class="logo-container" style="text-decoration: none;">
+                <div class="logo">
+                    <div class="logo-main">
+                        <span class="ut">UT</span><span class="walk">walk<span class="tld">.com</span></span>
+                    </div>
+                </div>
+                <div class="logo-badge">Rewards & Codes</div>
+            </a>
+            <div class="nav-links">
+                <button id="themeToggle" class="theme-toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="submitCodeBtn" class="btn-primary">Submit Code</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-container content-area" id="gameDetailContent">
+        <!-- Hero Section -->
+        <div class="game-hero">
+            <div class="hero-back">
+                <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Gallery</a>
+            </div>
+            <div class="hero-content">
+                <div class="hero-icon" id="gameIcon"></div>
+                <div class="hero-text">
+                    <div class="hero-meta">
+                        <span class="badge-tag" id="gameCategory">Category</span>
+                        <span class="meta-dot"></span>
+                        <span id="gameDeveloper">Developer</span>
+                    </div>
+                    <h1 id="gameTitle">Game Name</h1>
+                    <p id="gameDesc">Dynamic game description goes here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rewards-layout">
+            <!-- Col 1: Codes -->
+            <div class="rewards-column">
+                <div class="section-header">
+                    <i class="fa-solid fa-ticket"></i>
+                    <h2>Active Rewards</h2>
+                </div>
+                <div class="codes-list" id="gameCodesList">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+
+            <!-- Col 2: How to Redeem -->
+            <div class="redeem-column">
+                <div class="section-header">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h2>How to Redeem</h2>
+                </div>
+                <div class="guide-box">
+                    <ul class="steps-list" id="redeemSteps">
+                        <!-- Injected by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <section class="secondary-section">
+            <div class="section-header">
+                <i class="fa-solid fa-calendar-star"></i>
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="events-grid" id="eventsGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section class="secondary-section">
+            <div class="section-header">
+                <i class="fa-solid fa-newspaper"></i>
+                <h2>Latest Guides & News</h2>
+            </div>
+            <div class="blogs-grid" id="blogsGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo small">
+                        <div class="logo-main">
+                            <span class="ut">UT</span><span class="walk">walk<span class="tld">.com</span></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="brand-desc">Your ultimate destination for the latest gaming rewards, promo codes, and free links. Elevate your gaming experience with UTwalk.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Platform</h4>
+                    <a href="#">PC Games</a>
+                    <a href="#">Mobile Games</a>
+                    <a href="#">Roblox</a>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <button id="footerSubmitBtn" class="footer-action-link">Submit a Code</button>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="site-container footer-bottom">
+            <p>&copy; 2026 Made By A Gamer for Gamers with <span style="color: #ef4444;">❤️</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

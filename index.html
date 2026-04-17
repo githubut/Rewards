@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTwalk | Premium Gaming Codes & Links</title>
+    <meta name="description" content="Discover the latest gaming rewards, promo codes, and free links for your favorite games. Updated daily.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Space+Grotesk:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="site-container nav-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-main">
+                        <span class="ut">UT</span><span class="walk">walk<span class="tld">.com</span></span>
+                    </div>
+                </div>
+                <div class="logo-badge">Rewards & Codes</div>
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for games or codes...">
+            </div>
+            <div class="nav-links">
+                <button id="themeToggle" class="theme-toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="submitCodeBtn" class="btn-primary">Submit Code</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-container content-area">
+        <section class="filter-section">
+            <div class="filter-controls">
+                <div class="category-tabs" id="categoryTabs">
+                    <button class="tab active" data-category="trending">Trending</button>
+                    <button class="tab" data-category="all">All Games</button>
+                    <button class="tab" data-category="shooter">Shooter</button>
+                    <button class="tab" data-category="coinboard">Coin & Board</button>
+                    <button class="tab" data-category="roblox">Roblox</button>
+                    <button class="tab" data-category="action">Action</button>
+                    <button class="tab" data-category="battleroyale">Battle Royale</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-grid" id="gamesGrid">
+            <!-- Game cards injected by JS -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo small">
+                        <div class="logo-main">
+                            <span class="ut">UT</span><span class="walk">walk<span class="tld">.com</span></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="brand-desc">Your ultimate destination for the latest gaming rewards, promo codes, and free links. Elevate your gaming experience with UTwalk.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Platform</h4>
+                    <a href="#">PC Games</a>
+                    <a href="#">Mobile Games</a>
+                    <a href="#">Roblox</a>
+                    <a href="#">Console</a>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <button id="footerSubmitBtn" class="footer-action-link">Submit a Code</button>
+                    <a href="#">Report Issue</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="link-group">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <div class="site-container footer-bottom">
+            <p>&copy; 2026 Made By A Gamer for Gamers with <span style="color: #ef4444;">❤️</span></p>
+        </div>
+    </footer>
+
+    <!-- Modal for game codes -->
+    <div class="modal-overlay" id="codesModal">
+        <div class="modal">
+            <button class="close-modal" id="closeModal"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-game-icon" id="modalGameIcon"></div>
+                <div>
+                    <h2 id="modalGameTitle">Game Name</h2>
+                    <p class="modal-subtitle">Claim your free rewards below. Click to copy.</p>
+                </div>
+            </div>
+            <div class="codes-list" id="codesList">
+                <!-- Codes injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for submitting new codes -->
+    <div class="modal-overlay" id="submitModal">
+        <div class="modal">
+            <button class="close-modal" id="closeSubmitModal"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-game-icon" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <div>
+                    <h2>Submit New Code</h2>
+                    <p class="modal-subtitle">Help the community by sharing a new working code.</p>
+                </div>
+            </div>
+            <form class="submit-form" id="submitForm">
+                <div class="form-group">
+                    <label for="gameName">Select Game</label>
+                    <input type="text" id="gameName" name="game" placeholder="e.g. Genshin Impact" required>
+                </div>
+                <div class="form-group">
+                    <label for="promoCode">Promo Code</label>
+                    <input type="text" id="promoCode" name="code" placeholder="Enter the code here" required>
+                </div>
+                <div class="form-group">
+                    <label for="rewardType">Reward Description</label>
+                    <input type="text" id="rewardType" name="reward" placeholder="e.g. 50 Primogems" required>
+                </div>
+                <div class="form-group">
+                    <label for="submitNote">Note (Optional)</label>
+                    <textarea id="submitNote" name="note" placeholder="Any additional details or expiry dates..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full">Share Code</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
